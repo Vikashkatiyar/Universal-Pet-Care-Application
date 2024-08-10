@@ -1,0 +1,2 @@
+# Universal-Pet-Care Application
+## This is a simple Spring Boot application designed to provide a comprehensive platform for managing pet care. The application is structured into three main modules: Admin, Patient, Veterinarian(Doctor)
