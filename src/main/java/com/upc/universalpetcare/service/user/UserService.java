@@ -1,7 +1,10 @@
-package com.upc.universalpetcare.service;
+package com.upc.universalpetcare.service.user;
 
+import com.upc.universalpetcare.factory.UserFactory;
 import com.upc.universalpetcare.model.User;
 import com.upc.universalpetcare.repository.UserRepository;
+import com.upc.universalpetcare.request.RegistrationRequest;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +13,11 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final UserFactory userFactory;
 
 
 
-    public void add(User user) {
-        userRepository.save(user);
+    public User add(RegistrationRequest request) {
+        return userFactory.createUser(request);
     }
 }

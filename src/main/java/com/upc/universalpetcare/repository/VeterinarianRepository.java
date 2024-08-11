@@ -1,4 +1,8 @@
 package com.upc.universalpetcare.repository;
 
-public interface VeterinarianRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.upc.universalpetcare.model.Veterinarian;
+
+public interface VeterinarianRepository extends JpaRepository<Veterinarian, Long> {
 }

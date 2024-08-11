@@ -26,4 +26,6 @@ public class User {
     private String password;
     private String userType;
     private boolean isEnabled;
+    @Transient
+    private String specialization;
 }
